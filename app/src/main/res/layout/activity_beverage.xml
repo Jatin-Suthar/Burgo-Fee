@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeverageActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_backgroundColor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/beverage_back_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_back_button"
+            app:tint="#474747" />
+
+        <TextView
+            android:id="@+id/beverage_logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/pomfire_font"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/beverage_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="6dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_cart"
+            app:tint="#474747" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/beverage_online_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/beverage_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Online Delivery"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/beverage_dine_in_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/beverage_dine_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Dine In"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/beverage_menu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pacific"
+                android:gravity="center_horizontal"
+                android:text="Beverage's"
+                android:background="@color/black"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="9">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_cappuccino_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l2"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_cappuccino"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 3$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_cappuccino"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Special Cappuccino"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_cappuccino_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_cappuccino_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_cappuccino"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="a nice refreshment to start any work!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_cappuccino_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/cappuccino_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_cappuccino_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_cappuccino_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_blue_lagoon_cocktail_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l3"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_blue_lagoon_cocktail"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_blue_lagoon_cocktail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Blue Lagoon Cocktail"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_blue_lagoon_cocktail_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l3"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_blue_lagoon_cocktail_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_blue_lagoon_cocktail"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="a best beverage to enjoy with friends"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_blue_lagoon_cocktail_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/blue_lagoon_cocktail_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_blue_lagoon_cocktail_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_blue_lagoon_cocktail_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_coca_cola_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l4"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_coca_cola"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_coca_cola"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l4"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Coca cola"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_coca_cola_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l4"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_coca_cola_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_coca_cola"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="get a coca cola and enjoy your matches!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_coca_cola_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/coca_cola_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_coca_cola_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_coca_cola_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_pepsi_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="4"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l5"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_pepsi"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_pepsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l5"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Pepsi Cola"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_pepsi_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l5"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_pepsi_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_pepsi"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="get a coca cola and enjoy your matches!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_pepsi_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/pepsi_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_pepsi_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_pepsi_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_rirri_juice_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="5"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l6"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_rirri_juice"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_rirri_juice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l6"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Rirri Juice"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_rirri_juice_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l6"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_rirri_juice_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_rirri_juice"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Cold-pressed juice, and came from German side!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_rirri_juice_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/rirri_juice_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_rirri_juice_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_rirri_juice_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_orange_cocktail_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="6"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l7"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_orange_cocktail"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_orange_cocktail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l7"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Orange Cocktail"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_orange_cocktail_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l7"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_orange_cocktail_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_orange_cocktail"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Orange juice is what we deliver.Drink,Feel and Energize."
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_orange_cocktail_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/orange_cocktail_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_orange_cocktail_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_orange_cocktail_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beverage_lemon_water_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="7"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/beverage_l8"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/beverage_lemon_water"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FD7636"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/beverage_lemon_water"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_l8"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Lemon Water"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/beverage_lemon_water_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/beverage_l8"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/beverage_lemon_water_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/beverage_lemon_water"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Good for stomach, gives you much relief,must try!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/beverage_lemon_water_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/lemon_water_beverage_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/beverage_lemon_water_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/beverage_lemon_water_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SandwichActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_backgroundColor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/sandwiches_back_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_back_button"
+            app:tint="#474747" />
+
+        <TextView
+            android:id="@+id/sandwiches_logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/pomfire_font"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/sandwiches_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/ic_cart"
+            app:tint="#474747" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/sandwiches_online_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/sandwiches_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Online Delivery"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/sandwiches_dine_in_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/sandwiches_dine_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Dine In"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/sandwiches_menu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pacific"
+                android:gravity="center_horizontal"
+                android:text="Sandwiches"
+                android:background="@color/black"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="6">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sandwiches_grilled_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/sandwiches_l1"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/fastfood2"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="Price : 4$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/potta"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_l1"
+                            android:text="Grilled Sandwich"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/sandwiches_grilled"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@+id/sandwiches_l1"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="150dp"
+                            android:id="@+id/sandwiches_grilled_star"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_grilled"
+                            android:text="Non-veg, oven baked, with some meat curry inside"
+                            android:textSize="10sp"
+                            android:textStyle="italic"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="#424242"
+                            android:id="@+id/sandwiches_grilled_desc"
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/sandwiches_grilled_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_alignParentBottom="true"
+                            app:endIconTint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            android:layout_alignParentLeft="true"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/grilled_sandwiches_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/sandwiches_grilled_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="#38CF00"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/sandwiches_grilled_quantity_layout"
+                            android:text="ADD"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sandwiches_veg_grilled_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/sandwiches_l2"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/fastfood5"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="Price : 4$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/potta"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_l2"
+                            android:text="Veg-Grilled Sandwich"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/sandwiches_veg_grilled"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@+id/sandwiches_l2"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="150dp"
+                            android:id="@+id/sandwiches_veg_grilled_star"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_veg_grilled"
+                            android:text="100% vegetarian, oven baked, with some fried onion, tomato's"
+                            android:textSize="10sp"
+                            android:textStyle="italic"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="#424242"
+                            android:id="@+id/sandwiches_veg_grilled_desc"
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/sandwiches_veg_grilled_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_alignParentBottom="true"
+                            app:endIconTint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            android:layout_alignParentLeft="true"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/veg_grilled_sandwiches_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/sandwiches_veg_grilled_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="#38CF00"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/sandwiches_veg_grilled_quantity_layout"
+                            android:text="ADD"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sandwiches_old_school_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/sandwiches_l3"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/old_school_sandwich"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="Price : 4$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/potta"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_l3"
+                            android:text="Old-School Sandwich"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/sandwiches_old_school"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@+id/sandwiches_l3"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="150dp"
+                            android:id="@+id/sandwiches_old_school_star"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_old_school"
+                            android:text="old school bread, oven baked, with a potato curry inside"
+                            android:textSize="10sp"
+                            android:textStyle="italic"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="#424242"
+                            android:id="@+id/sandwiches_old_school_desc"
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/sandwiches_old_school_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_alignParentBottom="true"
+                            app:endIconTint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            android:layout_alignParentLeft="true"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/old_school_sandwiches_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/sandwiches_old_school_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="#38CF00"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/sandwiches_old_school_quantity_layout"
+                            android:text="ADD"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sandwiches_non_veg_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="3"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/sandwiches_l4"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/non_veg_sandwich"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="Price : 4$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/potta"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_l4"
+                            android:text="Non-veg Sandwich"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/sandwiches_non_veg"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@+id/sandwiches_l4"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="150dp"
+                            android:id="@+id/sandwiches_non_veg_star"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sandwiches_non_veg"
+                            android:text="Non-veg, oven baked, with some meat curry inside"
+                            android:textSize="10sp"
+                            android:textStyle="italic"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="#424242"
+                            android:id="@+id/sandwiches_non_veg_desc"
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/sandwiches_non_veg_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_alignParentBottom="true"
+                            app:endIconTint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            android:layout_alignParentLeft="true"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/non_veg_sandwiches_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/sandwiches_non_veg_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="#38CF00"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/sandwiches_non_veg_quantity_layout"
+                            android:text="ADD"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

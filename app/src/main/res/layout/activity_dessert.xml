@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DessertActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_backgroundColor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/desserts_back_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_back_button"
+            app:tint="#474747" />
+
+        <TextView
+            android:id="@+id/desserts_logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/pomfire_font"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/desserts_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="6dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_cart"
+            app:tint="#474747" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/desserts_online_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/desserts_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Online Delivery"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/desserts_dine_in_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/desserts_dine_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Dine In"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/desserts_menu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pacific"
+                android:gravity="center_horizontal"
+                android:text="Dessert's"
+                android:background="@color/black"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="6">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/desserts_choco_roll_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/desserts_l1"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/desserts_choco_roll"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 2$"
+                                android:textColor="#FFBF1E"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/desserts_choco_roll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_l1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Vanilla Chocolate Dessert"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/desserts_choco_roll_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/desserts_l1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/desserts_choco_roll_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_choco_roll"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="made with vanilla ice cream on brownie, and a choco roll on it! "
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/desserts_choco_roll_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/choco_roll_desserts_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/desserts_choco_roll_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/desserts_choco_roll_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/desserts_oreo_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/desserts_l2"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/desserts_oreo"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 3$"
+                                android:textColor="#FFBF1E"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/desserts_oreo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_l2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Oreo Brownies"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/desserts_oreo_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/desserts_l2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/desserts_oreo_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_oreo"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="oreo brownie with some vanilla flavour ice cream on it!"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/desserts_oreo_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/oreo_desserts_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/desserts_oreo_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/desserts_oreo_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/desserts_pancake_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/desserts_l3"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/desserts_pancake"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 3$"
+                                android:textColor="#FFBF1E"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/desserts_pancake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_l3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Pancakes"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/desserts_pancake_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/desserts_l3"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/desserts_pancake_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_pancake"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="pancakes were made from wheat flour, olive oil, honey, and curdled milk."
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/desserts_pancake_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/pancake_desserts_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/desserts_pancake_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/desserts_pancake_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/desserts_strawberry_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="3"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/desserts_l4"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/desserts_strawberry"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 2$"
+                                android:textColor="#FFBF1E"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/desserts_strawberry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_l4"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Strawberry Pastries"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/desserts_strawberry_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/desserts_l4"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/desserts_strawberry_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_strawberry"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Sweetened pastries are often described as bakers' confectionery."
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/desserts_strawberry_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/strawberry_desserts_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/desserts_strawberry_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/desserts_strawberry_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/desserts_vanilla_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="4"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/desserts_l5"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/desserts_vanilla"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 2$"
+                                android:textColor="#FFBF1E"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/desserts_vanilla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_l5"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Vanilla Pastries"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/desserts_vanilla_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/desserts_l5"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/desserts_vanilla_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desserts_vanilla"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Everybody love vanilla flavour so do a try."
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/desserts_vanilla_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/vanilla_desserts_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/desserts_vanilla_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/desserts_vanilla_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

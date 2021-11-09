@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/pizza"
+    android:paddingLeft="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="you just love it.."
+        android:fontFamily="@font/pacific"
+        android:textColor="#36FFFFFF"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/app_tagline"
+        />
+
+    <TextView
+        android:id="@+id/app_name_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_tagline"
+        android:layout_gravity="bottom"
+        android:fontFamily="@font/pompiere"
+        android:text="BurgoFee"
+        android:textColor="@color/primary_backgroundColor"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/app_welcome_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_name_tag"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/potta"
+        android:text="WELCOME"
+        android:textColor="#FFBF00"
+        android:textSize="30dp" />
+
+</RelativeLayout>

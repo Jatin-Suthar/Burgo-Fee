@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PizzaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_backgroundColor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/pizza_back_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_back_button"
+            app:tint="#474747" />
+
+        <TextView
+            android:id="@+id/pizza_logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/pomfire_font"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/pizza_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="6dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_cart"
+            app:tint="#474747" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/pizza_online_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/pizza_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Online Delivery"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/pizza_dine_in_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/pizza_dine_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/potta"
+                    android:text="Dine In"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/pizza_menu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pacific"
+                android:gravity="center_horizontal"
+                android:text="Pizza's"
+                android:background="@color/black"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="7">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pizza_margarita_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/pizza_l1"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pizza_margarita"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 5$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/pizza_margarita"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_l1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Margarita Pizza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pizza_margarita_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/pizza_l1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/pizza_margarita_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_margarita"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="vegetarian, oven baked, fried type : barbeque"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pizza_margarita_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/margarita_pizza_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/pizza_margarita_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/pizza_margarita_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pizza_new_york_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/pizza_l2"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pizza_new_york"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 6$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/pizza_new_york"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_l2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="New-York Pizza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pizza_new_york_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/pizza_l2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/pizza_new_york_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_new_york"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="non-vegetarian, oven baked, with some fried meat slices, black olives"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pizza_new_york_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/new_york_pizza_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/pizza_new_york_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/pizza_new_york_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pizza_nonVeg_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/pizza_l3"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pizza_non_veg"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 6$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/pizza_nonVeg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_l3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Non-veg Pizza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pizza_nonVeg_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/pizza_l3"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/pizza_nonVeg_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_nonVeg"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="Non-veg pizza, oven baked, with lots of meat slices on it"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pizza_nonVeg_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/nonVeg_pizza_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/pizza_nonVeg_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/pizza_nonVeg_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pizza_onion_capsicum_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="3"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/pizza_l4"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pizza_onion_capsicum"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 3$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/pizza_onion_capsicum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_l4"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Onion Capsicum Pizza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pizza_onion_capsicum_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/pizza_l4"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/pizza_onion_capsicum_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_onion_capsicum"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="100% vegetarian, oven baked, with some fried onions and capsicum "
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pizza_onion_capsicum_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/onion_capsicum_pizza_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/pizza_onion_capsicum_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/pizza_onion_capsicum_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pizza_corn_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_row="4"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/pizza_l5"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pizza_corn"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/potta"
+                                android:text="Price : 4$"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/pizza_corn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_l5"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Corn Pizza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pizza_corn_star"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/pizza_l5"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/pizza_corn_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pizza_corn"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="6dp"
+                            android:text="100% vegetarian, oven baked, with some corn and onions"
+                            android:textColor="#424242"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pizza_corn_quantity_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Quantity"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/ic_quantity"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/corn_pizza_autocomplete_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal"
+                                android:inputType="none"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/pizza_corn_add_btn"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/pizza_corn_quantity_layout"
+                            android:backgroundTint="#38CF00"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

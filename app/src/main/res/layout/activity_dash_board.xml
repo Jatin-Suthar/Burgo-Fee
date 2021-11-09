@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DashBoard">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:theme="@style/navigation_theme"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+    <LinearLayout
+        android:id="@+id/dashboard_slide_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_backgroundColor"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dashboard_menu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/ic_main_menu"
+                app:tint="#474747" />
+
+            <TextView
+                android:id="@+id/dashboard_logo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/pomfire_font"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/dashboard_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/ic_profile"
+                app:tint="#474747" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <RadioButton
+                        android:id="@+id/dashboard_online_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:id="@+id/dashboard_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/potta"
+                        android:text="Online Delivery"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/dashboard_dine_in_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:id="@+id/dashboard_dine_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/potta"
+                        android:text="Dine In"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/dashboard_view_menu_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pacific"
+                    android:background="@color/black"
+                    android:gravity="center_horizontal"
+                    android:text="View Menu"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:rowCount="2"
+                    android:columnCount="2"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_open_card1"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        app:cardElevation="8dp"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/fastfood1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/dashboard_sandwiches_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sandwiches"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/potta"
+                                android:textAlignment="center"
+                                android:gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_open_card2"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_row="0"
+                        android:layout_gravity="fill"
+                        android:layout_column="1"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        app:cardElevation="8dp"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/pizza2"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/dashboard_pizzas_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pizza's"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/potta"
+                                android:textAlignment="center"
+                                android:gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_open_card3"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_row="1"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        app:cardElevation="8dp"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/coca_cola"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/dashboard_beverage_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Beverages"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/potta"
+                                android:textAlignment="center"
+                                android:gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_open_card4"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        app:cardElevation="8dp"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/dessert1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/dashboard_desserts_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Desserts"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/potta"
+                                android:textAlignment="center"
+                                android:gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/dashboard_best_seller_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/pacific"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:background="@color/black"
+                    android:text="Best Offers"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black"
+                    android:elevation="4dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="7"
+                    android:columnCount="1"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_margarita_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l1"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/pizza_margarita"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text=" 6$ -30% 2.5$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_margarita"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l1"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="Margarita Pizza"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_margarita_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l1"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_margarita_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_margarita"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="vegetarian, oven baked, fried type : barbeque"
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_margarita_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/margarita_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_margarita_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_margarita_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_new_york_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l2"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/pizza_new_york"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text=" 6$ -30% 2.5$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_new_york"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l2"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="New-York Pizza"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_new_york_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l2"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_new_york_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_new_york"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="non-vegetarian, oven baked, with some fried meat slices, black olives"
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_new_york_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/new_york_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_new_york_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_new_york_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_coca_cola_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="2"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l3"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/beverage_coca_cola"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text="Offer Price : 1$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_coca_cola"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l3"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="Coca cola"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_coca_cola_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l3"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_coca_cola_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_coca_cola"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="get a coca cola and enjoy your matches!"
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_coca_cola_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/coca_cola_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_coca_cola_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_coca_cola_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_strawberry_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="3"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l4"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/desserts_strawberry"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text="SpecialPrice : 1$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_strawberry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l4"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="Strawberry Pastries"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_strawberry_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l4"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_strawberry_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_strawberry"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="Sweetened pastries are often described as bakers' confectionery."
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_strawberry_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/strawberry_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_strawberry_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_strawberry_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_paneer_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="4"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l5"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/panner_tikka"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text="Offer Price : 2$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_paneer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l5"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="Paneer Tikka"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_paneer_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l5"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_paneer_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_paneer"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="100% vegetarian, barbeque baked, with some paneer and onions"
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_paneer_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/paneer_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_paneer_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_paneer_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard_french_fries_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_row="6"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/dashboard_l6"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/slides2"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/potta"
+                                    android:text="Special Price : 2$"
+                                    android:textColor="#FFBF1E"
+                                    android:textSize="24dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/dashboard_french_fries"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_l6"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:text="French Fries"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/dashboard_french_fries_star"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/dashboard_l6"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/dashboard_french_fries_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dashboard_french_fries"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dp"
+                                android:text="French fries is known for quick dinner, some nicely baked potato slices."
+                                android:textColor="#424242"
+                                android:textSize="10sp"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dashboard_french_fries_quantity_layout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="140dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Quantity"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="2dp"
+                                app:endIconTint="@color/black"
+                                app:startIconDrawable="@drawable/ic_quantity"
+                                app:startIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/french_fries_dashboard_autocomplete_quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="none"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/dashboard_french_fries_add_btn"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/dashboard_french_fries_quantity_layout"
+                                android:backgroundTint="#38CF00"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

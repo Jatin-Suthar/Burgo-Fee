@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/primary_backgroundColor"
+    tools:context=".ProfileActivity"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/card_stroke">
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="254dp"
+            android:src="@drawable/ic_profile_image"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/personName"
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="184dp"
+            android:fontFamily="@font/potta"
+            android:gravity="center_horizontal"
+            android:text="Person Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/person_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="87dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginBottom="146dp"
+            android:fontFamily="@font/sigmar"
+            android:gravity="center_horizontal"
+            android:text="user_name"
+            android:textAlignment="center"
+            android:textColor="#292727"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:padding="10dp"
+        android:layout_marginTop="-90dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_yellow"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/foodOrdered"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_food"
+                app:tint="@color/white"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sigmar"
+                android:gravity="center_horizontal"
+                android:text="brownies"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/food_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sigmar"
+                android:gravity="center_horizontal"
+                android:text="count"
+                android:textAlignment="center"
+                android:textColor="#D6CCCC"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:background="@drawable/card_green"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/account_balance_logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_account_balance"
+                app:tint="@color/white"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/account_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sigmar"
+                android:gravity="center_horizontal"
+                android:text="300$"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/account_upi_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sigmar"
+                android:gravity="center_horizontal"
+                android:text="xyz@upi"
+                android:textAlignment="center"
+                android:textColor="#D6CCCC"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/card_white"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/profile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:text="0000000000"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/profile_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" . "
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/potta"/>
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:text="xyz100@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/profile_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:elevation="3dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:text="Edit"
+            android:textColor="#F44336"
+            android:textSize="24dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/card_white"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:elevation="4dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/last_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Payment"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date and time"
+            android:textSize="18sp"
+            android:textColor="#373636"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/date_time"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:elevation="4dp"
+        android:background="@drawable/card_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Cart"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/profile_cart"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="brownies * 2"
+            android:textSize="18sp"
+            android:textColor="#373636"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/profile_cart_item"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/profile_logout"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            app:tint="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="180dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/profile_home_image"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cart"
+            app:tint="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/profile_cart_image"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            app:tint="@color/black"
+            android:id="@+id/profile_logout_btn"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1D1D1"
+    android:orientation="vertical"
+    tools:context=".FoodCart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="#C6C6C6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
+                android:elevation="4dp"
+                android:background="@color/white"
+                android:paddingBottom="30dp">
+
+
+                <ImageView
+                    android:id="@+id/cart_food_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignBottom="@+id/cart_line1"
+                    android:src="@drawable/food1" />
+
+                <TextView
+                    android:id="@+id/cart_shop_name"
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="99dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="39dp"
+                    android:gravity="center_horizontal"
+                    android:text="Sunshine Restaurant"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cart_shop_address"
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginRight="31dp"
+                    android:text=" Sitapura Jaipur"
+                    android:textColor="#252525"
+                    android:textSize="15dp" />
+
+                <View
+                    android:id="@+id/cart_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="80dp"
+                    android:background="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/cart_food_ordered_image"
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="-5dp"
+                    android:src="@drawable/ic_fast_food"
+                    app:tint="#2B2B2B" />
+
+                <TextView
+                    android:id="@+id/cart_food_ordered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="120dp"
+                    android:text="Brownies"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cart_food_ordered_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="250dp"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cart_food_ordered_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="300dp"
+                    android:text="30$"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:elevation="4dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/cart_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="76dp" />
+
+                <TextView
+                    android:id="@+id/cart_no_contact_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opt in for No-Contact Delivery"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:id="@+id/cart_no_contact_desc"
+                    android:layout_width="311dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="71dp"
+                    android:text="Unwell, or avoiding contact? Plaease
+                    select no-contact delivery.Partner will
+                    safely place the order outside your door
+                    (not for COD)."
+                    android:textColor="#323131"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_coupon"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:tint="@color/black"
+                    android:id="@+id/cart_coupon_image"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="APPLY COUPON"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/cart_apply_coupon"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_forward_back"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/black"
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/cart_open_coupon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:elevation="4dp"
+                >
+
+                <TextView
+                    android:id="@+id/cart_bill_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BILL DETAILS"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/cart_item_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item Total"
+                        android:textColor="#151515"
+                        android:textSize="14sp"/>
+
+
+                    <TextView
+                        android:id="@+id/cart_total_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30$"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="250dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/cart_line2"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/cart_delivery_tip_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Tip"
+                        android:textColor="#151515"
+                        android:textSize="14sp"/>
+
+
+                    <TextView
+                        android:id="@+id/cart_delivery_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5$"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="240dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/cart_tax_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tax and Charges"
+                        android:textColor="#151515"
+                        android:textSize="14sp"/>
+
+
+                    <TextView
+                        android:id="@+id/cart_tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14$"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="208dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/cart_line3"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/cart_to_pay_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total to Pay"
+                        android:textColor="#151515"
+                        android:textSize="14sp"/>
+
+
+                    <TextView
+                        android:id="@+id/cart_to_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="94$"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="238dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_event_note_24"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/black"
+                        android:id="@+id/cart_order_info"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review your order and adress
+                        details to avoid cancellation."
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/cart_order_info_text"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Note : If you choose cancel,
+you can do it within 60minutes
+after placing order."
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cart_order_desc"
+                    />
+
+                <View
+                    android:id="@+id/cart_line4"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/card_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overview"
+                        android:textColor="#2196F3"
+                        android:layout_marginLeft="80dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:id="@+id/cart_overview"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Policy"
+                        android:textColor="#2196F3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="50dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:id="@+id/cart_policy"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/cart_line5"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="0dp"
+        android:padding="10dp"
+        android:background="@drawable/card_stroke_full">
+
+
+        <ImageView
+            android:id="@+id/car_pin_point"
+            android:layout_width="71dp"
+            android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-1dp"
+            android:layout_marginBottom="71dp"
+            android:src="@drawable/ic_pin"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/cart_address"
+            android:layout_width="258dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="100dp"
+            android:text="You are in this location"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/cart_pinCode"
+            android:layout_width="258dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="85dp"
+            android:text="Pin Code 304902"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/cart_add_address_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:elevation="4dp"
+            android:backgroundTint="#3BAC00"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:text="Add Address to Proceed"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

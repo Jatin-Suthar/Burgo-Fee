@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BurgoFee</string>
+    <string name="profile">Profile</string>
+    <string name="categories">Categories</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="food_menu">View Menu</string>
+    <string name="order_history">Order History</string>
+    <string name="favourite">My Favourite</string>
+    <string name="feedback">Feedback</string>
+    <string name="terms_condition">Terms and Condition</string>
+    <string name="contact_us">Contact Us</string>
+
+</resources>
